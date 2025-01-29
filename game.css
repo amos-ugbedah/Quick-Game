@@ -1,0 +1,98 @@
+/* General container styling */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* HUD styling */
+#hud {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    margin-bottom: 20px; /* Space between HUD and questions */
+}
+
+/* Progress Bar Container */
+#progressBar {
+    width: 20rem; /* Full width of the container */
+    height: 4rem;
+    border: 0.3rem solid #56a5eb;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the inner bar doesn't overflow */
+    
+}
+
+/* Progress Bar Inner Fill */
+#progressBarFull {
+    height: 4rem;
+    width: 0%; /* Initial width (updated dynamically) */
+    background-color: #56a5eb; /* Blue color for progress */
+    border-radius: 10px;
+    transition: width 0.5s ease; /* Smooth transition for progress updates */
+}
+
+/* Score styling */
+#hud-item {
+    text-align: center;
+}
+
+.hud-prefix {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hud-main-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for score */
+}
+
+/* Quiz question styling */
+#game {
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.choice-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice-container:hover {
+    background-color: #e9ecef;
+}
+
+.choice-prefix {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.choice-text {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Feedback colors for correct and incorrect answers */
+.choice-container.correct {
+    background-color: #4caf50; /* Green for correct answers */
+}
+
+.choice-container.incorrect {
+    background-color: #f44336; /* Red for incorrect answers */
+}
